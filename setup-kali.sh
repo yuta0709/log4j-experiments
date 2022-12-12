@@ -17,5 +17,8 @@ apt-get install -y openvswitch-switch openvswitch-common
 /usr/share/openvswitch/scripts/ovs-ctl start
 
 
+apt-get install -y default-jdk maven
+
+
 
 
