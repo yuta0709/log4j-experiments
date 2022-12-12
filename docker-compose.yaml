@@ -1,0 +1,20 @@
+services:
+  attacker-http:
+    build:
+      context: attacker-http
+    container_name: attacker-http
+    privileged: true
+    network_mode: "none"
+  attacker-ldap:
+    build:
+      context: attacker-ldap
+    container_name: attacker-ldap
+    privileged: true
+    network_mode: "none"
+  attacker-shell:
+    build:
+      context: attacker-shell
+    container_name: attacker-shell
+    privileged: true
+    network_mode: "none"
+    tty: true
