@@ -1,0 +1,23 @@
+services:
+  attacker-http:
+    build:
+      context: attacker-http
+    container_name: attacker-http
+  attacker-ldap:
+    build:
+      context: attacker-ldap
+    container_name: attacker-ldap
+  attacker-shell:
+    build:
+      context: attacker-shell
+    container_name: attacker-shell
+    hostname: attacker-shell
+    tty: true
+
+  victim-web:
+    build:
+      context: victim-web
+    container_name: victim-web
+    hostname: victim-web
+    ports:
+      - 8080:8080
