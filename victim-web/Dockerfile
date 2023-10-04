@@ -20,5 +20,6 @@ FROM maven:3.8.7-eclipse-temurin-17-focal
 WORKDIR /app
 
 COPY --from=0 /src/target/victim-web-0.0.1-SNAPSHOT.jar app.jar
+COPY ./secret.txt .
 
 CMD [ "java", "-jar", "app.jar" ]
